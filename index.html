@@ -8,71 +8,41 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div class="main">
-      <h1>Temperature Converter</h1>
-      <input
-        class="mg-top"
-        type="number"
-        placeholder="enter a value"
-        id="val1"
-      />
-      <select class="mg-top" name="" id="selc" disabled>
-        <option value="none">Select a Option</option>
-        <option value="cel">Celsius</option>
-        <option value="far">Farheneit</option>
-      </select>
-      <input
-        class="mg-top"
-        id="val2"
-        type="number"
-        placeholder="result"
-        disabled
-      />
-      <div class="bts">
-        <button type="reset" id="reset" class="btn mg-top" disabled>
-          Reset
-        </button>
-        <button type="submit" class="btn mg-top" id="btn" disabled>
-          Submit
-        </button>
+    <div class="main" id="main">
+        <ul>
+          <div class="left">
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Contact Us</a></li>
+          </div>
+        </ul>
+      <div class="first">
+        <h1><i> Order Food !!</i></h1>
+        <input type="search" name="bar" id="bar" placeholder=" search restaurant name or food item">
       </div>
     </div>
-    <script>
-      var btn = document.getElementById("btn");
-      var rs = document.getElementById("reset");
-      var val1 = document.getElementById("val1");
-      var selc = document.getElementById("selc");
-      var val2 = document.getElementById("val2");
-      var selc = document.getElementById("selc");
-      val1.addEventListener("input", function () {
-        if (val1.value !== "") {
-          rs.disabled = false;
-          btn.disabled = false;
-          selc.disabled = false;
-        } else {
-          rs.disabled = true;
-          selc.disabled = true;
-          btn.disabled = true;
-        }
-      });
+    <div class="footer">
+      <label>Top Brands For You</label>
+     <div class="min image">
+      <img src="./9834.webp" alt="">
+      <!-- <img src="./Food On way.webp" alt=""> -->
+      <img src="./HOCCO.webp" alt="">
+      <img src="./JayB.webp" alt="">
+      <img src="./lapinoz.webp" alt="">
+      <img src="./Mcd.webp" alt="">
 
-      btn.addEventListener("click", function () {
-        var n1 = parseFloat(val1.value);
-        if (selc.value === "cel") {
-          val2.value = (n1 * 9) / 5 + 32;
-        } else if (selc.value === "far") {
-          val2.value = (((n1 - 32) * 5) / 9).toFixed(2);
-        } else {
-          alert("Enter a appropriate value");
-        }
-      });
-      rs.addEventListener("click", function () {
-        val1.value = "";
-        val2.value = "";
-        rs.disabled = true;
-        selc.disabled = true;
-        btn.disabled = true;
-      });
-    </script>
+    </div>
+    </div>
+
+    <div class="lists">
+      <label>Top Food items for you</label>
+      <div class="list image">
+        <img src="./img1.webp" alt="">
+        <img src="./img2.webp" alt="">
+        <img src="./img3.webp" alt="">
+        <img src="./img4.webp" alt="">
+        <img src="./img5.webp" alt="">
+      </div>
+    </div>
   </body>
 </html>
