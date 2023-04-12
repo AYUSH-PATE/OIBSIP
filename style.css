@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Prompt:wght@200&display=swap');
+html,body
+{
+    height: 100%;
+    width: 100%;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+.nav
+{
+    height: 100vh;
+    width: 100vw;
+    background-color:#E8E2E2;
+    position: fixed;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.nav ul
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.nav ul li
+{
+     padding:1rem;
+    font-size: 25px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    /* text-decoration: none; */
+
+}
+
+
+.nav ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.nav ul li a:hover{
+    background-color:  rgb(13, 119, 185);
+    color: white; 
+   border-radius: 0.2rem;
+
+}
+.nav ul li a:current{
+    border-bottom: 1px solid;
+}
+.image
+{
+ height: 260px;
+ width: 240px;
+ border: 2px solid;
+ position:absolute;
+ /* margin:15rem; */
+ margin-top: 12rem;
+ margin-left: 17rem; 
+ float: left;
+ border-radius: 50%;
+background-image: url("./IMG20220801150322_Original.jpg");
+background-size: cover;
+}
+.des
+{
+ height: 300px;
+ width: 500px;
+ /* border: 2px solid; */
+ position:absolute;
+margin-left: 37rem;
+margin-top: 12rem;
+font-size: 25px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    font-size: 53px;
+    padding: 2rem;
+}
+.logo
+{
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    position:absolute;
+
+}
+.frm
+{
+  height: 480px;
+  width: 450px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  padding: 1rem 0 0 9rem;
+ 
+}
+.frm label
+{
+   /* padding-right: 1rem;  */
+   
+   font-family: 'Fira Sans', sans-serif;
+   font-family: 'Prompt', sans-serif;
+   font-weight: bold;
+   font-size: 20px;
+  
+   
+}
+input
+{
+    margin: 1rem 0 0 0;
+    width: 20rem;
+    height: 1.7rem;
+    display: flex;
+    flex-direction: row-reverse;
+   border-radius: 0.7rem;
+   border: none; 
+   font-size:23px;
+   padding-left: 0.5rem;
+   font-family: 'Fira Sans', sans-serif;
+   font-family: 'Prompt', sans-serif;
+   font-weight: bold;
+}
+input:hover
+{
+    border: 3px solid rgb(6, 101, 159);
+}
+input:placeholder-shown
+{
+    text-align: center;
+}
+.nav h1
+{ 
+ padding-top: 1rem;
+ text-align: center;
+  
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  font-size: 40px;  
+}
+.frm h4
+{
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 13px;
+    padding:0.3rem;
+}
+.but
+{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+     margin-left: 2rem;
+    margin-top: 1.3rem;
+    
+}
+button
+{
+    background-color:#E8E2E2;
+    border-radius: 0.5rem;
+}
+button:hover
+{
+    background-color:white;
+    color:black ;
+}
+.but2
+{
+    margin: 0 0 0 5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.about
+{
+    /* height: 100px;
+    width: 180px; */
+    /* border: 1px solid; */
+    position: absolute;
+    margin: 9rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 43px
+}
+.me
+{
+    /* /* height: 100px; */
+    width: 580px; 
+    /* border: 1px solid; */
+    position: absolute;
+    margin: 15rem 0 0 9.5rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 23px
+}
+.hobby
+{
+     /* height: 350px;
+    width: 380px; 
+    border: 1px solid; */
+    position: absolute;
+    margin: 22rem 0 0 9rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 43px;
+}
+.progress
+{
+      height: 200px; 
+    width: 500px; 
+     border: 1px solid; 
+     position: absolute;
+     margin: 27rem 0 0 9rem;
+}
+
+.skill
+{
+    height: 10px;
+    width: 275px;
+    background-color: dodgerblue;
+    border: 0px solid;
+    border-radius: 30px;
+    margin:0.5rem 0 0 1rem;
+    /* padding:; */
+    /* display: flex; */
+}
+.skillcontainer
+{
+    font-size: 23px;
+padding: 12px;
+}
+
+.skillitem
+{
+ display:flex;
+ padding: 5px;
+}
+.full
+{  
+    
+    width: 325px;
+}
+.threefourth
+{
+    width: 286.50px;
+}
+.hob
+{
+    height: 100px;
+    width: 500px;
+    /* border: 1px solid black; */
+    position:relative;
+    float: right;
+    margin:8.5rem 13rem 0 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 43px;
+}
+.hob1
+{
+    height: 100px;
+    width: 400px;
+    /* border: 1px solid black; */
+    position:relative;
+    float: right;
+    margin:13rem -25rem 0 10rem;
+  
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 23px;
+    padding: 1.5rem 0 1rem 2rem;
+}
+.aoi
+{
+    height: 100px;
+    width: 400px;
+    /* border: 1px solid black; */
+    position:relative;
+    float: right;
+    margin:20.5rem -37rem 0 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 43px;
+    padding-top: 1rem;
+}
+.aoi1
+{
+    height: 100px;
+    width: 400px;
+    /* border: 1px solid black;x */
+    position:relative;
+    float: right;
+    margin:27rem -37rem 0 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;  
+    font-size: 23px;
+    /* padding-top: 1rem;   */
+}
