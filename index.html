@@ -1,34 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="nav">
-
-        <ul type="none">
-
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="AboutMe.html">About Me</a></li>
-            <li><a href="Services.html"> Services</a></li>
-        </ul>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="main">
+      <h1>Temperature Converter</h1>
+      <input
+        class="mg-top"
+        type="number"
+        placeholder="enter a value"
+        id="val1"
+      />
+      <select class="mg-top" name="" id="selc" disabled>
+        <option value="none">Select a Option</option>
+        <option value="cel">Celsius</option>
+        <option value="far">Farheneit</option>
+      </select>
+      <input
+        class="mg-top"
+        id="val2"
+        type="number"
+        placeholder="result"
+        disabled
+      />
+      <div class="bts">
+        <button type="reset" id="reset" class="btn mg-top" disabled>
+          Reset
+        </button>
+        <button type="submit" class="btn mg-top" id="btn" disabled>
+          Submit
+        </button>
+      </div>
     </div>
-        <div class="image">
-            <img src="./logo.jpg" alt="" style="width:300px; height: 300px; border-radius: 10rem;">
-        </div>
-        <div class="des">
-            Hi I am Ayush Patel
-            <h5>Web-Developer</h5>
-        </div>
-        
+    <script>
+      var btn = document.getElementById("btn");
+      var rs = document.getElementById("reset");
+      var val1 = document.getElementById("val1");
+      var selc = document.getElementById("selc");
+      var val2 = document.getElementById("val2");
+      var selc = document.getElementById("selc");
+      val1.addEventListener("input", function () {
+        if (val1.value !== "") {
+          rs.disabled = false;
+          btn.disabled = false;
+          selc.disabled = false;
+        } else {
+          rs.disabled = true;
+          selc.disabled = true;
+          btn.disabled = true;
+        }
+      });
 
-</body>
-
+      btn.addEventListener("click", function () {
+        var n1 = parseFloat(val1.value);
+        if (selc.value === "cel") {
+          val2.value = (n1 * 9) / 5 + 32;
+        } else if (selc.value === "far") {
+          val2.value = (((n1 - 32) * 5) / 9).toFixed(2);
+        } else {
+          alert("Enter a appropriate value");
+        }
+      });
+      rs.addEventListener("click", function () {
+        val1.value = "";
+        val2.value = "";
+        rs.disabled = true;
+        selc.disabled = true;
+        btn.disabled = true;
+      });
+    </script>
+  </body>
 </html>
